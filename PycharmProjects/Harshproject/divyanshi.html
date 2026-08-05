@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For Divyanshi ❤️</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+        font-family: 'Segoe UI', sans-serif;
+        color: white;
+        text-align: center;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .box {
+        background: rgba(0,0,0,0.4);
+        padding: 30px;
+        border-radius: 20px;
+        box-shadow: 0 0 20px rgba(0,0,0,0.3);
+        animation: fadeIn 2s ease-in-out;
+    }
+    h1 {
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
+    p {
+        font-size: 20px;
+        margin: 8px 0;
+    }
+    @keyframes fadeIn {
+        from {opacity: 0; transform: scale(0.8);}
+        to {opacity: 1; transform: scale(1);}
+    }
+    button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 10px;
+        background: #ff4d6d;
+        color: white;
+        font-size: 18px;
+        cursor: pointer;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="box">
+    <h1>❤️ Divyanshi I Love You ❤️</h1>
+
+    <p>Tum meri life ki sabse pyari smile ho 😊</p>
+    <p>Tumhare bina sab kuch adhura lagta hai 💔</p>
+    <p>Har din tumse aur zyada pyaar hota hai 💖</p>
+    <p>Tum meri happiness ho, meri duniya ho 🌍</p>
+
+    <button onclick="speakLove()">Click for Voice 🔊</button>
+</div>
+
+<script>
+function speakLove() {
+    let text = "Divyanshi, I love you. Tum meri life ki sabse pyari smile ho. Tumhare bina sab kuch adhura lagta hai. I really love you so much.";
+    let speech = new SpeechSynthesisUtterance(text);
+    speech.lang = "en-US";
+    window.speechSynthesis.speak(speech);
+}
+</script>
+
+</body>
+</html>
