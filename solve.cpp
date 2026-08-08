@@ -1,38 +1,17 @@
-
 #include <iostream>
 using namespace std;
-int fact(int x)
-{
-  int f = 1;
-  for (int i = 1; i <= x; i++)
-    f *= i;
-
-  return f;
-}
-int ncr(int n, int r)
-{
-
-  //   int a = fact (n);
-  //   int b = fact (r);
-  //   int c = fact (n-r);
-  // return a/(b*c); ye bhi likh skte ho aur ye bhi niche baat ek hi hai
-  return fact(n) / (fact(r) * fact(n - r));
-}
 int main()
 {
-  int n;
-  cout << "Enter the row ";
-  cin >> n;
+    int n;
+    cout << "Enter the n ";
+    cin >> n;
+    int product = 1;
+    while (n > 0)
+    {
+        int digits = n % 10;
+        product = product * digits;
+        n = n / 10;
+    }
 
-  for (int i = 0; i <= n; i++)
-  {
-    for (int j = 0; j <= n - i - 1; j++)
-
-      cout << " ";
-    for (int j = 0; j <= i; j++)
-
-      cout << ncr(i, j) << " ";
-
-    cout << endl;
-  }
+    cout << product;
 }
