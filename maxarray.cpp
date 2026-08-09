@@ -3,10 +3,11 @@
 using namespace std;
 int main()
 {
-    int arr[] = {5, 4, 3, 45, 9, 65, 89};
-    int max = 1;
+    int arr[] = {5, 4, 3, 45, 9,  89,900,1000};
+    int n = sizeof(arr) / sizeof(arr[0]);
+    int max = arr[0];
 
-    for (int i = 0; i < 7; i++)
+    for (int i = 0; i < n; i++)
     {
         max = arr[i];
     }
